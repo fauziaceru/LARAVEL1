@@ -22,11 +22,11 @@
         </thead>
         <tbody>
             @foreach ($kategori as $item)
-                <tr>
-                    <td>{{ $item['kode'] }}</td>
-                    <td>{{ $item['nama'] }}</td>
-                    <td>{{ $item['jenis'] }}</td>
-                </tr>
+            <tr>
+                <td>{{ $item->kode }}</td>
+                <td>{{ $item->nama }}</td>
+                <td>{{ $item->jenis }}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
