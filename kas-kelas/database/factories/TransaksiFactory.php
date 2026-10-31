@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Akun;     // 1. Tambahkan import ini
-use App\Models\Kategori; // 2. Tambahkan import ini
+use App\Models\Akun;     
+use App\Models\Kategori; 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
