@@ -4,9 +4,7 @@ namespace App\Filament\Resources\Kategoris\Tables;
 
 use App\Models\Kategori; 
 use Filament\Notifications\Notification; 
-use Filament\Actions\BulkActionGroup; 
 use Filament\Actions\DeleteAction; 
-use Filament\Actions\DeleteBulkAction; 
 use Filament\Actions\EditAction; 
 use Filament\Tables\Columns\TextColumn; 
 use Filament\Tables\Filters\SelectFilter; 
@@ -39,6 +37,12 @@ class KategorisTable
                     ->label('Jumlah transaksi')
                     ->counts('transaksi')
                     ->sortable(),
+                
+                TextColumn::make('updated_at')
+                    ->label('Terakhir Diperbarui')
+                    ->dateTime('d M Y H:i')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),                    
             ])
             ->defaultSort('nama')
             ->filters([
